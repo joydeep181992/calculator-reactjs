@@ -5,11 +5,9 @@ import Display from "./Display";
 const Calculator = ({ calculatorKeys }) => {
   const [getKeyClick, setKeyClick] = useState("");
   const onClick = (e) => {
-    if (e.target.value === "C") {
-      return setKeyClick("");
-    }
+    e.preventDefault();
+    if (e.target.value === "C") return setKeyClick("");
     if (e.target.value === "=") {
-      console.log(getKeyClick);
       try {
         setKeyClick(eval(getKeyClick));
       } catch (error) {
@@ -17,7 +15,7 @@ const Calculator = ({ calculatorKeys }) => {
       }
       return;
     }
-    e.preventDefault();
+
     setKeyClick((getKeyClick) => getKeyClick + e.target.value);
   };
   return (
