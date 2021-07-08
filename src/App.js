@@ -1,25 +1,71 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Calculator from "./Components/Calculator";
+
+const calculatorKeys = [
+  {
+    keyCal: "0",
+    value: 0,
+  },
+  {
+    keyCal: "1",
+    value: 1,
+  },
+  {
+    keyCal: "2",
+    value: 2,
+  },
+  {
+    keyCal: "3",
+    value: 3,
+  },
+  {
+    keyCal: "4",
+    value: 4,
+  },
+  {
+    keyCal: "5",
+    value: 5,
+  },
+  {
+    keyCal: "6",
+    value: 6,
+  },
+  {
+    keyCal: "7",
+    value: 7,
+  },
+  {
+    keyCal: "8",
+    value: 8,
+  },
+  {
+    keyCal: "9",
+    value: 9,
+  },
+  {
+    keyCal: "+",
+    value: "+",
+  },
+  {
+    keyCal: "-",
+    value: "-",
+  },
+  {
+    keyCal: "=",
+    value: "=",
+  },
+  {
+    keyCal: "*",
+    value: "*",
+  },
+  {
+    keyCal: "C",
+    value: "C",
+  },
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <Calculator calculatorKeys={calculatorKeys} />;
 }
 
 export default App;
